@@ -9,5 +9,3 @@ after that, I will complete all tests by the end of this weekend
 then this code will be good to go (if not sooner!)
 
 thank you for your understanding :)
-
-v3 coming soon!
