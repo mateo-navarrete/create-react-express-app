@@ -1,11 +1,7 @@
-# Create-React-Express-app
+# create-react-express-app
 
-tests almost complete!
+## UNDER CONSTRUCTION!!
 
-ETA: feb 17th (apologies gotta spend valentines with my gf)
+### running the final tests this weekend ( feb 9 2019 )
 
-after that, I will complete all tests by the end of this weekend
-
-then this code will be good to go (if not sooner!)
-
-thank you for your understanding :)
+### expected production ready date => feb 12 2019
