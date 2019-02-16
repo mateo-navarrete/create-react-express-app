@@ -1,32 +1,23 @@
 {
   "name": "create-react-express-app",
-  "version": "0.2.0",
+  "version": "0.7.0",
   "description": "a boilerplate frontend react with an express backend full-stack app",
-  "main": "index.js",
-  "scripts": {},
+  "author": "Mateo Navarrete 🤓 <mateonavarrete@pursuit.org>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mateo-navarrete/create-react-express-app.git"
-  },
-  "engines": {
-    "node": ">=10"
-  },
-  "author": "🔥 Mateo Navarrete 🔥",
-  "license": "MIT",
-  "preferGlobal": true,
-  "bin": {
-    "init": "bin/init"
   },
   "bugs": {
     "url": "https://github.com/mateo-navarrete/create-react-express-app/issues"
   },
   "homepage": "https://github.com/mateo-navarrete/create-react-express-app#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "ora": "^3.0.0"
-  },
+  "preferGlobal": "true",
   "directories": {
-    "doc": "docs"
+    "bin": "./bin"
+  },
+  "engines": {
+    "node": ">=10"
   },
   "keywords": [
     "react",
@@ -35,6 +26,12 @@
     "create",
     "full",
     "stack",
-    "app"
-  ]
+    "app",
+    "fullstack",
+    "full-stack",
+    "server"
+  ],
+  "dependencies": {
+    "ora": "^3.0.0"
+  }
 }

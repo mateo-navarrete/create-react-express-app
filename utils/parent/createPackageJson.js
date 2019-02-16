@@ -5,7 +5,7 @@ const writeFile = promisify(fs.writeFile);
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
   spinner.start();
-  console.log(`Creating package.json...`);
+  console.log(`[ createPackageJson ] : ${name}/package.json`);
   try {
     const packageJsonObj = {
       name: `${name}`,
@@ -25,11 +25,11 @@ module.exports = async (name, spinner) => {
     await writeFile(`${name}/package.json`, packageJson);
     const isValid = fs.existsSync(`${name}/package.json`);
     isValid
-      ? spinner.succeed(`[ SUCCESS ] : package.json created.`)
-      : spinner.fail(`[ ERROR ] : package.json not created.`);
+      ? spinner.succeed(`[ createPackageJson ] : SUCCESS`)
+      : spinner.fail(`[ createPackageJson ] : ERROR`);
     return { message: isValid };
   } catch (e) {
-    throw new Error('unable to create package.json');
+    throw new Error(`@ [ createPackageJson ] : ${name}/package.json`);
     return { message: e };
   }
 };

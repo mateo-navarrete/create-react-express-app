@@ -23,7 +23,7 @@
 .env.test.local
 .env.production.local
 /v1
-/xtra
+/v2
 
 
 npm-debug.log*

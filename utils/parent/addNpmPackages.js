@@ -5,7 +5,7 @@ const execFile = promisify(require('child_process').execFile);
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
   spinner.start();
-  console.log(`Adding npm packages...`);
+  console.log(`[ addNpmPackages ] : install --prefix concurrently`);
   try {
     const isValid = await execFile('npm', [
       'install',
@@ -14,11 +14,11 @@ module.exports = async (name, spinner) => {
       'concurrently',
     ]).then(() => ({ message: true }));
     isValid
-      ? spinner.succeed(`[ SUCCESS ] : packages added.`)
-      : spinner.fail(`[ ERROR ] : packages not added.`);
+      ? spinner.succeed(`[ addNpmPackages ] : SUCCESS`)
+      : spinner.fail(`[ addNpmPackages ] : ERROR`);
     return isValid;
   } catch (e) {
-    throw new Error('unable to install npm packages');
+    throw new Error(`@ [ addNpmPackages ] : install --prefix concurrently`);
     return { message: e };
   }
 };

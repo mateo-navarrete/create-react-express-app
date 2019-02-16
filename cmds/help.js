@@ -2,9 +2,13 @@ const menus = {
   main: `
     create-react-express-app [command] <options>
 
-   [APP_NAME] .......... create app [APP_NAME]
-    version ............ show package version
-    help ............... show help menu for a command`,
+    create fullstack app in folder [APP_NAME] =>
+
+    fullstack [APP_NAME]
+
+    other useful commands =>
+    fullstack -version ..... show package version
+    fullstack -help ........ show help menu for a command`,
 
   version: `
     create-react-express-app <options>

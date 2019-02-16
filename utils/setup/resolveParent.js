@@ -1,7 +1,9 @@
-const createGitignore = require('./createGitignore');
-const createPackageJson = require('./createPackageJson');
-const createReadme = require('./createReadme');
-const addNpmPackages = require('./addNpmPackages');
+const {
+  addNpmPackages,
+  createGitignore,
+  createPackageJson,
+  createReadme,
+} = require('../parent');
 
 // const value = await asyncFunction().catch(err => new Error(err));
 // if (value instanceof Error)
@@ -25,6 +27,8 @@ module.exports = async (name, spinner) => {
     addedNpmPackages.message
   ) {
     return { message: true };
+  } else {
+    return { message: false };
   }
   // console.log(createdReadme);
   // try {

@@ -2,10 +2,10 @@ const {
   createFolders,
   isNameValid,
   resolveParent,
-  resolveBackend,
-  resolveFrontend,
+  // resolveBackend,
+  // resolveFrontend,
   spinner,
-} = require('../utils');
+} = require('../utils/setup');
 
 module.exports = async name => {
   const isValid = isNameValid(name, spinner);
@@ -15,21 +15,30 @@ module.exports = async name => {
     if (createdFolders.message) {
       // console.log(createFolders);
       let parent = resolveParent(name, spinner);
-      let frontend = resolveFrontend(name, spinner);
-      let backend = resolveBackend(name, spinner);
+      // let backend = resolveBackend(name, spinner);
+      // let frontend = resolveFrontend(name, spinner);
       let p = await parent;
-      let fe = await frontend;
-      let be = await backend;
-      if (p.message && fe.message && be.message) {
+      // let be = await backend;
+      // let fe = await frontend;
+      if (
+        p.message
+        // && be.message
+        // && fe.message
+      ) {
         console.log(`----------------------------------------`);
         console.log();
-        console.log('COMPLETE!!!', p, fe, be);
+        console.log(
+          'COMPLETE!!!',
+          p,
+          // be
+          // fe,
+        );
         console.log();
       } else {
         console.log(new Error('Unable to create app.'));
       }
     } else {
-      console.log(new Error('Unable to create folders.'));
+      console.log(new Error('Unable to create required folders.'));
     }
   } else {
     console.log(new Error('Unable to validate app name.'));
