@@ -1,41 +1,23 @@
-const { addNpmPackages, createBackend, createPort, editPackageJson, installBackendPackages } = require('../backend');
-const { spinner } = require('./spinner');
-// const npmInstall = require('./npmInstall');
+const {
+  addNpmPackages,
+  cleanupBackend,
+  createBackend,
+  createPort,
+  editPackageJson,
+} = require('../backend');
 
-// express backend
-// npm install --prefix ./backend body-parser pg-promise supervisor
-// cd backend/
-// npm install
-
-module.exports = async (name) => {
-  // console.log('@resolveBackend');
-  // express backend
-  // npm install --prefix ./backend body-parser pg-promise supervisor
-  // cd backend/
-  // npm install
-  //===
-  //let or const?
+module.exports = async (name, spinner) => {
   let createdBackend = await createBackend(name, spinner);
   let createdPort = await createPort(name, spinner);
   let editedPackageJson = await editPackageJson(name, spinner);
   let addedNpmPackages = await addNpmPackages(name, spinner);
-  let installedBackendPackages = await installBackendPackages(name, spinner);
-
-  // let npmInstallBackend = await npmInstall(
-  // name,
-  // spinner
-  // );
-  // let npmInstalled = await npmInstall(name, spinner);
-  //.catch(error =>  console.error('@rPerr', error)  );
+  let cleanedupBackend = await cleanupBackend(name, spinner);
   if (
-    createdBackend.message
-    && createdPort.message
-    && editedPackageJson.message
-    && addedNpmPackages.message
-    && installedBackendPackages.message
-    // &&
-    // updatedFrontendPackageJson.message &&
-    // npmInstalled.message
+    createdBackend.message &&
+    createdPort.message &&
+    editedPackageJson.message &&
+    addedNpmPackages.message &&
+    cleanedupBackend.message
   ) {
     return { message: true };
   } else {
