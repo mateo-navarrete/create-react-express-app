@@ -2,7 +2,7 @@ const {
   createFolders,
   isNameValid,
   resolveParent,
-  // resolveBackend,
+  resolveBackend,
   // resolveFrontend,
   spinner,
 } = require('../utils/setup');
@@ -14,15 +14,15 @@ module.exports = async name => {
     const createdFolders = createFolders(name, spinner);
     if (createdFolders.message) {
       // console.log(createFolders);
-      let parent = resolveParent(name, spinner);
-      // let backend = resolveBackend(name, spinner);
+      let parent = resolveParent(name);//, spinner);
+      let backend = resolveBackend(name);//, spinner);
       // let frontend = resolveFrontend(name, spinner);
       let p = await parent;
-      // let be = await backend;
+      let be = await backend;
       // let fe = await frontend;
       if (
         p.message
-        // && be.message
+        && be.message
         // && fe.message
       ) {
         console.log(`----------------------------------------`);
@@ -30,7 +30,7 @@ module.exports = async name => {
         console.log(
           'COMPLETE!!!',
           p,
-          // be
+          be
           // fe,
         );
         console.log();

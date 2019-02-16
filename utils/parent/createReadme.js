@@ -10,12 +10,13 @@ module.exports = async (name, spinner) => {
     const readme = `# ${name}`;
     await writeFile(`${name}/readme.md`, readme);
     const isValid = fs.existsSync(`${name}/readme.md`);
+    console.log(`----------------------------------------`);
     isValid
-      ? spinner.succeed(`[ createReadme ] : SUCCESS`)
-      : spinner.fail(`[ createReadme ] : ERROR`);
+      ? spinner.succeed(` [ createReadme ] : SUCCESS`)
+      : spinner.fail(` [ createReadme ] : ERROR`);
     return { message: isValid };
   } catch (e) {
-    throw new Error(`@ [ createReadme ] : ${name}/readme.md`);
+    throw new Error(`@[ createReadme ] : ${name}/readme.md`);
     return { message: e };
   }
 };

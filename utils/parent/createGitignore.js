@@ -42,12 +42,13 @@ module.exports = async (name, spinner) => {
     `;
     await writeFile(`${name}/.gitignore`, gitignore);
     const isValid = fs.existsSync(`${name}/.gitignore`);
+    console.log(`----------------------------------------`);
     isValid
-      ? spinner.succeed(`[ createGitignore ] : SUCCESS`)
-      : spinner.fail(`[ createGitignore ] : ERROR`);
+      ? spinner.succeed(` [ createGitignore ] : SUCCESS`)
+      : spinner.fail(` [ createGitignore ] : ERROR`);
     return { message: isValid };
   } catch (e) {
-    throw new Error(`@ [ createGitignore ] : ${name}/.gitignore`);
+    throw new Error(`@[ createGitignore ] : ${name}/.gitignore`);
     return { message: e };
   }
 };

@@ -10,5 +10,7 @@ const fx = [
 ];
 
 module.exports = {
-  spinner: ora({ spinner: fx[(Math.random() * fx.length) >> 0] }),
+  spinner: ora({ spinner: 'weather' }),
+
+  // spinner: ora({ spinner: fx[(Math.random() * fx.length) >> 0] }),
 };

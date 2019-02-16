@@ -24,12 +24,13 @@ module.exports = async (name, spinner) => {
 
     await writeFile(`${name}/package.json`, packageJson);
     const isValid = fs.existsSync(`${name}/package.json`);
+    console.log(`----------------------------------------`);
     isValid
-      ? spinner.succeed(`[ createPackageJson ] : SUCCESS`)
-      : spinner.fail(`[ createPackageJson ] : ERROR`);
+      ? spinner.succeed(` [ createPackageJson ] : SUCCESS`)
+      : spinner.fail(` [ createPackageJson ] : ERROR`);
     return { message: isValid };
   } catch (e) {
-    throw new Error(`@ [ createPackageJson ] : ${name}/package.json`);
+    throw new Error(`@[ createPackageJson ] : ${name}/package.json`);
     return { message: e };
   }
 };

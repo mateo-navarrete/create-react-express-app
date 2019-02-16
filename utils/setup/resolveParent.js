@@ -4,12 +4,13 @@ const {
   createPackageJson,
   createReadme,
 } = require('../parent');
+const { spinner } = require('./spinner');
 
 // const value = await asyncFunction().catch(err => new Error(err));
 // if (value instanceof Error)
 //   return res.status(500).send("There was an error doing something");
 
-module.exports = async (name, spinner) => {
+module.exports = async (name) => {
   // createReadme;
   // createGitignore;
   // createPkgJson;

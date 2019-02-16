@@ -1,6 +1,6 @@
 const createFolders = require('./createFolders');
 const isNameValid = require('./isNameValid');
-// const resolveBackend = require('./resolveBackend');
+const resolveBackend = require('./resolveBackend');
 // const resolveFrontend = require('./resolveFrontend');
 const resolveParent = require('./resolveParent');
 const { spinner } = require('./spinner');
@@ -8,7 +8,7 @@ const { spinner } = require('./spinner');
 module.exports = {
   createFolders,
   isNameValid,
-  // resolveBackend,
+  resolveBackend,
   // resolveFrontend,
   resolveParent,
   spinner,

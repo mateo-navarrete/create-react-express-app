@@ -11,8 +11,9 @@ module.exports = (name, spinner) => {
     fs.existsSync(name) &&
     fs.existsSync(`${name}/frontend`) &&
     fs.existsSync(`${name}/backend`);
+  console.log(`----------------------------------------`);
   isValid
-    ? spinner.succeed(`[ createFolders ] : SUCCESS`)
-    : spinner.fail(`[ createFolders ] : ERROR`);
+    ? spinner.succeed(` [ createFolders ] : SUCCESS`)
+    : spinner.fail(` [ createFolders ] : ERROR`);
   return { message: isValid };
 };

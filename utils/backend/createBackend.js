@@ -6,25 +6,30 @@ const execFile = promisify(require('child_process').execFile);
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
   spinner.start();
-  console.log(`creating express backend...`);
+  console.log(`[ createBackend ] : express ${name}/backend`);
   try {
-    const { stdout } = await execFile('express', ['my-fresh-app/backend']).then(
-      () => ({
-        message: true,
-      })
-    );
-    // const { stdout } = await execFile('node', ['--version']);
-    // console.log('@stdout', stdout);
-    // console.log('backend complete');
-    // const isValid = await execFile("express", ["backend"]).then(() => ({
-    //   message: true
-    // }));
+    const isValid = await execFile('express', [`${name}/backend`]).then(() => ({
+      message: true,
+    }));
+    console.log(`----------------------------------------`);
     isValid
-      ? spinner.succeed(`[ SUCCESS ] : express backend created.`)
-      : spinner.fail(`[ ERROR ] : failed to create express backend.`);
+      ? spinner.succeed(` [ createBackend ] : SUCCESS`)
+      : spinner.fail(` [ createBackend ] : ERROR`);
     return isValid;
   } catch (e) {
-    throw new Error('unable to create express backend');
+    throw new Error(`@[ createBackend ] : express ${name}/backend`);
     return { message: e };
   }
 };
+
+// const { stdout } = await execFile('express', [`${name}/backend`]).then(
+//   () => ({
+//     message: true,
+//   })
+// );
+// const { stdout } = await execFile('node', ['--version']);
+// console.log('@stdout', stdout);
+// console.log('backend complete');
+// const isValid = await execFile("express", ["backend"]).then(() => ({
+//   message: true
+// }));
