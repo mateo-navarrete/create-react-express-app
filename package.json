@@ -1,6 +1,6 @@
 {
   "name": "create-react-express-app",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "a boilerplate frontend react with an express backend full-stack app",
   "author": "Mateo Navarrete 🤓 <mateonavarrete@pursuit.org>",
   "license": "MIT",

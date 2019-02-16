@@ -10,7 +10,7 @@ module.exports = async (name, spinner) => {
     const isValid = await execFile('rm', [
       '-rf',
       `${name}/frontend/.gitignore`,
-      // `${name}/frontend/.git`,
+      `${name}/frontend/.git`,
     ]).then(() => ({ message: true }));
     console.log(`----------------------------------------`);
     isValid
@@ -18,7 +18,9 @@ module.exports = async (name, spinner) => {
       : spinner.fail(` [ cleanupFrontend ] : ERROR`);
     return isValid;
   } catch (e) {
-    throw new Error(`@[ cleanupFrontend ] : rm -rf ${name}/frontend/.gitignore`);
+    throw new Error(
+      `@[ cleanupFrontend ] : rm -rf ${name}/frontend/.gitignore`
+    );
     return { message: e };
   }
 };
