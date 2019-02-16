@@ -10,7 +10,6 @@ ___
 Navigate to your projects root directory:  
 ```npm install -g create-react-express-app```
 
-<<<<<<< HEAD
 *NOTE*  
 * This package expects to be installed globally so you can run the command anywhere: ```fullstack MY_FULLSTACK_APP_NAME```
 
@@ -46,8 +45,3 @@ Please see the repository for more details:
 [create-react-express-app](https://github.com/mateo-navarrete/create-react-express-app)  
 
 More features, including Windows support, coming soon!
-=======
-### running the final tests this weekend ( feb 15 2019 )
-
-### expected production ready date => feb 19 2019
->>>>>>> e8ac2210155fe2de6479b5cebd37f496824c4f14
