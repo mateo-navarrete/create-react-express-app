@@ -17,5 +17,7 @@ module.exports = async (name, spinner) => {
     cleanedupFrontend.message
   ) {
     return { message: true };
+  } else {
+    return { mess: false };
   }
 };

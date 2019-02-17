@@ -1,5 +1,4 @@
-const fs = require('fs');
-const path = require('path');
+const { fs, path } = require('../nodeUtils');
 
 module.exports = (dir, spinner) => {
   console.log(`----------------------------------------`);

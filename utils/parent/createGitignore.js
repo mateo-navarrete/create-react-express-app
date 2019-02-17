@@ -1,6 +1,4 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const writeFile = promisify(fs.writeFile);
+const { fs, writeFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);

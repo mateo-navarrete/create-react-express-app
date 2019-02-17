@@ -2,27 +2,26 @@
 
 ---
 
-## PRODUCTION READY DATE: 2/19/19
+## PRODUCTION READY for Mac Users
 
-**_features:_**
-
-## Works on Mac
-
-**_Windows users please check the github repo_**
+**_Windows Users please check the Github repo_**
 
 ---
 
 ## Install Instructions:
 
 Navigate to your projects root directory:  
-*(NOT your desktop)*  
+_(NOT your desktop)_  
 `npm install -g create-react-express-app`
 
-_NOTE_
+_NOTE:_
 
-- This package expects to be installed globally so you can run the command anywhere: `fullstack MY_FULLSTACK_APP_NAME`
+- This package expects to be installed globally so you can run the command anywhere:  
+  `fullstack MY_FULLSTACK_APP_NAME`
 
-- This package also expects [create-react-app](https://www.npmjs.com/package/create-react-app) && [express-generator](https://www.npmjs.com/package/express-generator) to be installed globally as well
+- This package also expects the following packages to be installed globally as well:
+  - [create-react-app](https://www.npmjs.com/package/create-react-app)
+  - [express-generator](https://www.npmjs.com/package/express-generator)
 
 **Be sure you have globally installed the required packages:**
 
@@ -43,19 +42,30 @@ _This step can be skipped if [create-react-app](https://www.npmjs.com/package/cr
 **TO BUILD APP:**  
 `fullstack theNameOfMyNewFullstackAppGoesHere`
 
-**TO DEPLOY DEV SERVER:**
+**TO DEPLOY DEV SERVER:**  
 inside app folder =>  
 `npm start`
 
+// for example:
+
+```
+cd theNameOfMyNewFullstackAppGoesHere
+npm start
+
+```
+
+// the app will automatically open on http://localhost:3000/  
+// the backend express server can be viewed on http://localhost:3100/
+
 ---
 
-**_frontend @ http://localhost:3000/_**  
-**_backend @ http://localhost:3100/_**
+**frontend @ http://localhost:3000/**  
+**backend @ http://localhost:3100/**
 
 ---
 
-NOTE:
-By the production ready date, this package works as expected on Mac.
+NOTE:  
+This package works as expected on Mac.
 
 This package needs to be slightly refactored to have it work properly on Windows. Apologies.
 

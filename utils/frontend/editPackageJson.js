@@ -1,7 +1,4 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
+const { readFile, writeFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
@@ -16,7 +13,6 @@ module.exports = async (name, spinner) => {
     let editedPackageJson = JSON.stringify(packageJson);
     await writeFile(packageJsonPath, editedPackageJson);
     const getEditedPackageJson = await readFile(packageJsonPath, 'utf8');
-    // console.log('gepj', getEditedPackageJson);
     const isValid = getEditedPackageJson.indexOf(proxy) >= 0;
     console.log(`----------------------------------------`);
     isValid

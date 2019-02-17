@@ -1,6 +1,4 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const execFile = promisify(require('child_process').execFile);
+const { execFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
@@ -19,7 +17,9 @@ module.exports = async (name, spinner) => {
       : spinner.fail(` [ addNpmPackagesParent ] : ERROR`);
     return isValid;
   } catch (e) {
-    throw new Error(`@[ addNpmPackagesParent ] : npm install --prefix concurrently`);
+    throw new Error(
+      `@[ addNpmPackagesParent ] : npm install --prefix concurrently`
+    );
     return { message: e };
   }
 };

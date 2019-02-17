@@ -1,6 +1,4 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const execFile = promisify(require('child_process').execFile);
+const { execFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
@@ -14,7 +12,9 @@ module.exports = async (name, spinner) => {
     ]).then(() => ({ message: true }));
     console.log(`----------------------------------------`);
     isValid
-      ? spinner.succeed(` [ cleanupBackend ] : SUCCESS`)
+      ? spinner.succeed(` [ cleanupBackend ] : SUCCESS
+        This next step may take a minute,
+        Gratitude for your understanding.`)
       : spinner.fail(` [ cleanupBackend ] : ERROR`);
     return isValid;
   } catch (e) {

@@ -1,7 +1,4 @@
-// express backend
-const fs = require('fs');
-const { promisify } = require('util');
-const execFile = promisify(require('child_process').execFile);
+const { execFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);
@@ -21,15 +18,3 @@ module.exports = async (name, spinner) => {
     return { message: e };
   }
 };
-
-// const { stdout } = await execFile('express', [`${name}/backend`]).then(
-//   () => ({
-//     message: true,
-//   })
-// );
-// const { stdout } = await execFile('node', ['--version']);
-// console.log('@stdout', stdout);
-// console.log('backend complete');
-// const isValid = await execFile("express", ["backend"]).then(() => ({
-//   message: true
-// }));

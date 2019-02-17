@@ -1,6 +1,4 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const execFile = promisify(require('child_process').execFile);
+const { execFile } = require('../nodeUtils');
 
 module.exports = async (name, spinner) => {
   console.log(`----------------------------------------`);

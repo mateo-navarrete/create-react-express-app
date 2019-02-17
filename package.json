@@ -1,7 +1,7 @@
 {
   "name": "create-react-express-app",
-  "version": "0.9.1",
-  "description": "a boilerplate frontend react with an express backend full-stack app",
+  "version": "0.9.2",
+  "description": "a boilerplate react frontend with an express backend full-stack app generator",
   "author": "Mateo Navarrete 🤓 <mateonavarrete@pursuit.org>",
   "license": "MIT",
   "repository": {
@@ -20,6 +20,8 @@
     "node": ">=10"
   },
   "keywords": [
+    "create-react-app",
+    "express-generator",
     "react",
     "express",
     "boilerplate",
@@ -27,9 +29,22 @@
     "full",
     "stack",
     "app",
+    "generator",
     "fullstack",
     "full-stack",
-    "server"
+    "javascript",
+    "js",
+    "node",
+    "server",
+    "template",
+    "react-frontend",
+    "frontend",
+    "express-backend",
+    "backend",
+    "axios",
+    "body-parser",
+    "pg-promise",
+    "supervisor"
   ],
   "dependencies": {
     "ora": "^3.0.0"

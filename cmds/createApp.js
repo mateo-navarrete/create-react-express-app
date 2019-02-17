@@ -22,7 +22,10 @@ module.exports = async name => {
       if (p.message && be.message && fe.message) {
         console.log(`----------------------------------------`);
         console.log();
-        console.log('COMPLETE!!!', p, be, fe);
+        // console.log('COMPLETE!!!', p, be, fe);
+        console.log(`COMPLETE! to run server:`);
+        console.log(`cd ${name}`);
+        console.log(`npm start`);
         console.log();
       } else {
         console.log(new Error('Unable to create app.'));
