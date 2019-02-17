@@ -5,39 +5,30 @@ module.exports = async (name, spinner) => {
   spinner.start();
   console.log(`[ createGitignore ] : ${name}/.gitignore`);
   try {
-    const gitignore = `
-    # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+    const gitignore = `# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-    # dependencies
-    node_modules
-    /node_modules
-    backend/node_modules
-    /backend/node_modules
-    frontend/node_modules
-    /frontend/node_modules
-    /backend/.pnp
-    /frontend/.pnp
-    .pnp.js
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-    # testing
-    /backend/coverage
-    /frontend/coverage
+# testing
+/coverage
 
-    # production
-    /backend/build
-    /frontend/build
+# production
+/backend/build
+/frontend/build
 
-    # misc
-    .DS_Store
-    .env.local
-    .env.development.local
-    .env.test.local
-    .env.production.local
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-    npm-debug.log*
-    yarn-debug.log*
-    yarn-error.log*
-    `;
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*`;
     await writeFile(`${name}/.gitignore`, gitignore);
     const isValid = fs.existsSync(`${name}/.gitignore`);
     console.log(`----------------------------------------`);
