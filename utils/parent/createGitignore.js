@@ -9,6 +9,8 @@ module.exports = async (name, spinner) => {
 
 # dependencies
 /node_modules
+/backend/node_modules
+/frontend/node_modules
 /.pnp
 .pnp.js
 
