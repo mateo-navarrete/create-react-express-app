@@ -9,8 +9,11 @@ module.exports = async (name, spinner) => {
     # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
     # dependencies
+    node_modules
     /node_modules
+    backend/node_modules
     /backend/node_modules
+    frontend/node_modules
     /frontend/node_modules
     /backend/.pnp
     /frontend/.pnp
@@ -30,9 +33,6 @@ module.exports = async (name, spinner) => {
     .env.development.local
     .env.test.local
     .env.production.local
-    /v1
-    /xtra
-
 
     npm-debug.log*
     yarn-debug.log*

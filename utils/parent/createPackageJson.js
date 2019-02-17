@@ -15,8 +15,12 @@ module.exports = async (name, spinner) => {
         start:
           'concurrently --kill-others "cd frontend && npm start" "cd backend && npm start"',
       },
+      keywords: [],
       author: '',
-      license: 'MIT',
+      license: 'ISC',
+      repository: {},
+      bugs: {},
+      homepage: '',
     };
     let packageJson = JSON.stringify(packageJsonObj);
 
