@@ -2,6 +2,11 @@
 
 ---
 
+# NOTE: NO LONGER MAINTAINED!
+## MAY UPDATE SOMETIME IN THE FUTURE, BUT FOR NOW PLS DO NOT USE
+
+--
+
 ## PRODUCTION READY for Mac Users
 
 **_Windows Users please check the Github repo_**
